@@ -1,13 +1,17 @@
 const sumAll = function(start, end) {
     sum = 0;
-    if (start < end ) {
-        for (let i = start; i <= end; i++) {
-            sum += i;
+    if (start > 0 && end > 0 && typeof start == 'number' && typeof end == 'number') {
+        if (start < end ) {
+            for (let i = start; i <= end; i++) {
+                sum += i;
+            }
+        } else {
+            for (let i = end; i <= start; i++) {
+                sum += i;
+            }
         }
     } else {
-        for (let i = end; i <= start; i++) {
-            sum += i;
-         }
+        sum = "ERROR"
     }
     return sum;
 };
